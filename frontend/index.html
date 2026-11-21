@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TripMate AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-logo">✈</span>
+        <span class="brand-name">TripMate AI</span>
+      </div>
+      <button id="newChatBtn" class="new-chat-btn" type="button">+ New chat</button>
+    </header>
+
+    <main id="chatScroll" class="chat-scroll">
+      <div class="chat-inner">
+        <section id="welcome" class="welcome">
+          <div class="welcome-logo">✈</div>
+          <h1>Where to next?</h1>
+          <p>Ask me anything about travel, or say "plan a trip" and I'll build a full itinerary.</p>
+          <div class="suggestions">
+            <button type="button" data-prompt="What is the weather in Tokyo today?">
+              <span>🌦️</span> Weather in Tokyo today
+            </button>
+            <button type="button" data-prompt="Suggest good hotels in Paris for a couple.">
+              <span>🏨</span> Good hotels in Paris
+            </button>
+            <button type="button" data-prompt="Which airlines fly from Delhi to Dubai?">
+              <span>✈️</span> Airlines from Delhi to Dubai
+            </button>
+            <button type="button" data-prompt="Plan a 5 days Goa trip from Delhi under 40,000 rupees.">
+              <span>🗺️</span> Plan a 5-day Goa trip
+            </button>
+          </div>
+        </section>
+
+        <div id="messages" class="messages"></div>
+      </div>
+    </main>
+
+    <footer class="composer-wrap">
+      <div class="composer">
+        <textarea id="userInput" rows="1" placeholder="Ask anything about your trip..."></textarea>
+        <button id="sendBtn" class="send-btn" type="button" aria-label="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </button>
+      </div>
+      <p class="composer-hint">TripMate AI can make mistakes. Check prices, visas and bookings before you travel.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
